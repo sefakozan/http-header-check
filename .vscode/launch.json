@@ -14,7 +14,7 @@
             "type": "node",
             "request": "launch",
             "name": "debug backend",
-            "program": "${workspaceFolder}/server.js",
+            "program": "${workspaceFolder}/api/server.js",
             "runtimeExecutable": "npm",
             "runtimeArgs": ["run", "start"],
             "skipFiles": [
