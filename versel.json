@@ -4,12 +4,27 @@
     {
       "src": "api/server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "docs/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/api/server.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "api/server.js"
+      "dest": "/docs/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=0"
+      }
+    },
+    {
+      "src": "/",
+      "dest": "/docs/index.html"
     }
   ]
 }
