@@ -16,7 +16,7 @@ document.getElementById('headerForm').addEventListener('submit', async (e) => {
         // Make a direct GET request to the provided URL
         const response = await fetch(urlInput, {
             method: 'GET',
-            mode: 'cors', // CORS modunu etkinleştir
+            // mode: 'cors', // CORS modunu etkinleştir
             headers: {
                 'Accept': '*/*'
             }
