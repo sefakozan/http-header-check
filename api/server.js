@@ -8,6 +8,7 @@ const app = express();
 app.use(cors()); // CORS'u etkinleştir
 app.use(express.urlencoded({ extended: true }));
 
+
 // Ana sayfa route'u
 app.get('/', (req, res) => {
     res.send('Merhaba, bu bir metin yanıtıdır!');
