@@ -1,33 +1,38 @@
 {
-  "name": "http-header-check",
-  "version": "1.0.0",
-  "description": "A simple web application built with Node.js and Bootstrap to analyze HTTP headers of a given URL. Users can input a URL, and the application fetches and displays the HTTP headers in a clean, responsive table.",
-  "homepage": "https://github.com/sefakozan/http-header-check#readme",
-  "bugs": {
-    "url": "https://github.com/sefakozan/http-header-check/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sefakozan/http-header-check.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "build": "echo \"Build completed\" && exit 0"
-  },
-  "dependencies": {
-    "axios": "^1.11.0",
-    "express": "^4.18.2"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  }
+	"name": "http-header-check",
+	"version": "1.0.0",
+	"description": "A simple web application built with Node.js and Bootstrap to analyze HTTP headers of a given URL. Users can input a URL, and the application fetches and displays the HTTP headers in a clean, responsive table.",
+	"homepage": "https://github.com/sefakozan/http-header-check#readme",
+	"bugs": {
+		"url": "https://github.com/sefakozan/http-header-check/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sefakozan/http-header-check.git"
+	},
+	"license": "ISC",
+	"author": "",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js",
+		"dev": "nodemon server.js",
+		"build": "echo \"Build completed\" && exit 0",
+		"format": "biome format --write .",
+		"format:all": "biome check --write .",
+		"format:check": "biome check .",
+		"lint": "biome lint ."
+	},
+	"dependencies": {
+		"axios": "^1.11.0",
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.1.3",
+		"nodemon": "^3.1.10"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	}
 }
