@@ -12,16 +12,17 @@ document.getElementById('headerForm').addEventListener('submit', async (e) => {
     resultsDiv.classList.add('d-none');
     headerTable.innerHTML = '';
 
-    const BASE_URL = 'http://127.0.0.1:3000';
+    // Use relative URL for API calls - works both locally and on Vercel
+    const BASE_URL = window.location.origin;
 
     try {
         // Send POST request to backend
-        const response = await fetch(`${BASE_URL}/check`, {
+        const response = await fetch(`${BASE_URL}/api/check`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
+                'Content-Type': 'application/json',
             },
-            body: `url=${encodeURIComponent(urlInput)}`
+            body: JSON.stringify({ url: urlInput })
         });
 
         const data = await response.json();
