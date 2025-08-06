@@ -11,7 +11,16 @@ export default function handler(req, res) {
   }
 
   if (req.method === 'GET') {
-    res.json({ message: 'HTTP Header Check API is running!' });
+    res.json({ 
+      message: 'HTTP Header Check API is running!',
+      endpoints: {
+        'GET /api/hello': 'Hello message',
+        'POST /api/check': 'Check HTTP headers of a URL',
+        'GET /api/add': 'Add two numbers (query params: num1, num2)',
+        'POST /api/multiply': 'Multiply two numbers (body: {num1, num2})'
+      },
+      version: '1.0.0'
+    });
   } else {
     res.status(405).json({ error: 'Method not allowed' });
   }
