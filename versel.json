@@ -1,22 +1,15 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "docs/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/docs/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=0"
-      }
-    },
-    {
-      "src": "/",
-      "dest": "/docs/index.html"
-    }
-  ]
+    "version": 2,
+    "builds": [
+        {
+            "src": "./server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
 }
